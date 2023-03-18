@@ -12,15 +12,15 @@ const lookup = {
 
 function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
-  for(let i=0;i<encodedStr.length;i++){
-        let str=encodedStr.charAt[i];
+	let ns=encodedStr.split(" ");
+  for(let i=0;i<ns.length;i++){
+        let str=ns[i];
 	  let word="";
-	  for(let j in lookup){
-		  if(j==str){
-			  word+=lookup[j];
-		  }
-		  decodedArr.push(word);
+	  for(let j=0;j<str.length;j++){
+		  var char=str.charAt(j);
+		  word+=lookup[char];
 	  }
+	  decodedArr.push(word);
     }
 
   return decodedArr.join(" ");//return decodedArr
