@@ -16,15 +16,16 @@ function rot13(encodedStr){
         for(let j in lookup){
             if(j==encodedStr[i]){
                 decodedArr.push(lookup[j]);
+				encodedStr[i]=lookup[j];
             }
         }
     }
 
-  return decodedArr;//return decodedArr
+  return ;//return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-
+//console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 module.exports = rot13;
